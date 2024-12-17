@@ -1,0 +1,425 @@
+[
+  {
+    "month": "2020年11月",
+    "old_applied": 18910,
+    "new_applied": 2421,
+    "completed": 3279,
+    "accepted": 1526,
+    "declined": 1669,
+    "other": 84
+  },
+  {
+    "month": "2020年12月",
+    "old_applied": 18052,
+    "new_applied": 2591,
+    "completed": 4085,
+    "accepted": 2015,
+    "declined": 1971,
+    "other": 99
+  },
+  {
+    "month": "2021年01月",
+    "old_applied": 16559,
+    "new_applied": 1838,
+    "completed": 4258,
+    "accepted": 2168,
+    "declined": 2018,
+    "other": 72
+  },
+  {
+    "month": "2021年02月",
+    "old_applied": 14139,
+    "new_applied": 2388,
+    "completed": 4349,
+    "accepted": 2378,
+    "declined": 1890,
+    "other": 81
+  },
+  {
+    "month": "2021年03月",
+    "old_applied": 12178,
+    "new_applied": 3012,
+    "completed": 4911,
+    "accepted": 3003,
+    "declined": 1811,
+    "other": 97
+  },
+  {
+    "month": "2021年04月",
+    "old_applied": 10279,
+    "new_applied": 3019,
+    "completed": 2721,
+    "accepted": 1906,
+    "declined": 737,
+    "other": 78
+  },
+  {
+    "month": "2021年05月",
+    "old_applied": 10577,
+    "new_applied": 2312,
+    "completed": 2310,
+    "accepted": 1280,
+    "declined": 967,
+    "other": 63
+  },
+  {
+    "month": "2021年06月",
+    "old_applied": 10579,
+    "new_applied": 4138,
+    "completed": 2648,
+    "accepted": 1692,
+    "declined": 886,
+    "other": 70
+  },
+  {
+    "month": "2021年07月",
+    "old_applied": 12069,
+    "new_applied": 4228,
+    "completed": 2240,
+    "accepted": 1117,
+    "declined": 1055,
+    "other": 68
+  },
+  {
+    "month": "2021年08月",
+    "old_applied": 14057,
+    "new_applied": 3760,
+    "completed": 2268,
+    "accepted": 1443,
+    "declined": 762,
+    "other": 63
+  },
+  {
+    "month": "2021年09月",
+    "old_applied": 15549,
+    "new_applied": 3398,
+    "completed": 2973,
+    "accepted": 1640,
+    "declined": 1265,
+    "other": 68
+  },
+  {
+    "month": "2021年10月",
+    "old_applied": 15974,
+    "new_applied": 2915,
+    "completed": 2626,
+    "accepted": 1084,
+    "declined": 1487,
+    "other": 55
+  },
+  {
+    "month": "2021年11月",
+    "old_applied": 16263,
+    "new_applied": 2759,
+    "completed": 2751,
+    "accepted": 1360,
+    "declined": 1301,
+    "other": 90
+  },
+  {
+    "month": "2021年12月",
+    "old_applied": 16271,
+    "new_applied": 2635,
+    "completed": 4000,
+    "accepted": 2801,
+    "declined": 1126,
+    "other": 73
+  },
+  {
+    "month": "2022年01月",
+    "old_applied": 14813,
+    "new_applied": 2214,
+    "completed": 2940,
+    "accepted": 1868,
+    "declined": 1005,
+    "other": 67
+  },
+  {
+    "month": "2022年02月",
+    "old_applied": 14087,
+    "new_applied": 2667,
+    "completed": 2684,
+    "accepted": 1573,
+    "declined": 1046,
+    "other": 65
+  },
+  {
+    "month": "2022年03月",
+    "old_applied": 14069,
+    "new_applied": 3278,
+    "completed": 3290,
+    "accepted": 2110,
+    "declined": 1105,
+    "other": 75
+  },
+  {
+    "month": "2022年04月",
+    "old_applied": 14057,
+    "new_applied": 2852,
+    "completed": 2363,
+    "accepted": 1831,
+    "declined": 448,
+    "other": 84
+  },
+  {
+    "month": "2022年05月",
+    "old_applied": 14546,
+    "new_applied": 2613,
+    "completed": 2249,
+    "accepted": 1598,
+    "declined": 598,
+    "other": 53
+  },
+  {
+    "month": "2022年06月",
+    "old_applied": 14650,
+    "new_applied": 4571,
+    "completed": 2938,
+    "accepted": 2036,
+    "declined": 832,
+    "other": 70
+  },
+  {
+    "month": "2022年07月",
+    "old_applied": 16283,
+    "new_applied": 4661,
+    "completed": 2797,
+    "accepted": 2016,
+    "declined": 729,
+    "other": 52
+  },
+  {
+    "month": "2022年08月",
+    "old_applied": 18149,
+    "new_applied": 4463,
+    "completed": 2755,
+    "accepted": 1867,
+    "declined": 817,
+    "other": 71
+  },
+  {
+    "month": "2022年09月",
+    "old_applied": 19857,
+    "new_applied": 3503,
+    "completed": 2615,
+    "accepted": 1787,
+    "declined": 769,
+    "other": 59
+  },
+  {
+    "month": "2022年10月",
+    "old_applied": 20744,
+    "new_applied": 3239,
+    "completed": 2599,
+    "accepted": 1801,
+    "declined": 736,
+    "other": 62
+  },
+  {
+    "month": "2022年11月",
+    "old_applied": 21384,
+    "new_applied": 2952,
+    "completed": 3374,
+    "accepted": 2208,
+    "declined": 1083,
+    "other": 83
+  },
+  {
+    "month": "2022年12月",
+    "old_applied": 20962,
+    "new_applied": 2765,
+    "completed": 3271,
+    "accepted": 2420,
+    "declined": 787,
+    "other": 64
+  },
+  {
+    "month": "2023年01月",
+    "old_applied": 20455,
+    "new_applied": 2444,
+    "completed": 2488,
+    "accepted": 1765,
+    "declined": 661,
+    "other": 62
+  },
+  {
+    "month": "2023年02月",
+    "old_applied": 20412,
+    "new_applied": 2960,
+    "completed": 2308,
+    "accepted": 1493,
+    "declined": 742,
+    "other": 73
+  },
+  {
+    "month": "2023年03月",
+    "old_applied": 21064,
+    "new_applied": 3602,
+    "completed": 2465,
+    "accepted": 1705,
+    "declined": 702,
+    "other": 58
+  },
+  {
+    "month": "2023年04月",
+    "old_applied": 22200,
+    "new_applied": 3001,
+    "completed": 1870,
+    "accepted": 1252,
+    "declined": 555,
+    "other": 63
+  },
+  {
+    "month": "2023年05月",
+    "old_applied": 23330,
+    "new_applied": 3064,
+    "completed": 2486,
+    "accepted": 1795,
+    "declined": 644,
+    "other": 47
+  },
+  {
+    "month": "2023年06月",
+    "old_applied": 23908,
+    "new_applied": 4524,
+    "completed": 2154,
+    "accepted": 1636,
+    "declined": 465,
+    "other": 53
+  },
+  {
+    "month": "2023年07月",
+    "old_applied": 26278,
+    "new_applied": 4527,
+    "completed": 2114,
+    "accepted": 1503,
+    "declined": 544,
+    "other": 67
+  },
+  {
+    "month": "2023年08月",
+    "old_applied": 28691,
+    "new_applied": 4068,
+    "completed": 2211,
+    "accepted": 1582,
+    "declined": 572,
+    "other": 57
+  },
+  {
+    "month": "2023年09月",
+    "old_applied": 30548,
+    "new_applied": 3603,
+    "completed": 1990,
+    "accepted": 1468,
+    "declined": 461,
+    "other": 61
+  },
+  {
+    "month": "2023年10月",
+    "old_applied": 32161,
+    "new_applied": 3532,
+    "completed": 1836,
+    "accepted": 1271,
+    "declined": 499,
+    "other": 66
+  },
+  {
+    "month": "2023年11月",
+    "old_applied": 33857,
+    "new_applied": 3102,
+    "completed": 1703,
+    "accepted": 1269,
+    "declined": 367,
+    "other": 67
+  },
+  {
+    "month": "2023年12月",
+    "old_applied": 35255,
+    "new_applied": 2861,
+    "completed": 1388,
+    "accepted": 1062,
+    "declined": 273,
+    "other": 53
+  },
+  {
+    "month": "2024年01月",
+    "old_applied": 36727,
+    "new_applied": 2308,
+    "completed": 1678,
+    "accepted": 1241,
+    "declined": 356,
+    "other": 81
+  },
+  {
+    "month": "2024年02月",
+    "old_applied": 37357,
+    "new_applied": 2906,
+    "completed": 1668,
+    "accepted": 1292,
+    "declined": 320,
+    "other": 56
+  },
+  {
+    "month": "2024年03月",
+    "old_applied": 38594,
+    "new_applied": 2986,
+    "completed": 1375,
+    "accepted": 1069,
+    "declined": 240,
+    "other": 66
+  },
+  {
+    "month": "2024年04月",
+    "old_applied": 40205,
+    "new_applied": 3239,
+    "completed": 1230,
+    "accepted": 793,
+    "declined": 370,
+    "other": 67
+  },
+  {
+    "month": "2024年05月",
+    "old_applied": 42213,
+    "new_applied": 2820,
+    "completed": 1533,
+    "accepted": 1056,
+    "declined": 415,
+    "other": 62
+  },
+  {
+    "month": "2024年06月",
+    "old_applied": 43493,
+    "new_applied": 3791,
+    "completed": 1856,
+    "accepted": 1293,
+    "declined": 496,
+    "other": 67
+  },
+  {
+    "month": "2024年07月",
+    "old_applied": 45421,
+    "new_applied": 4402,
+    "completed": 1935,
+    "accepted": 1333,
+    "declined": 545,
+    "other": 57
+  },
+  {
+    "month": "2024年08月",
+    "old_applied": 47883,
+    "new_applied": 3565,
+    "completed": 2512,
+    "accepted": 1841,
+    "declined": 627,
+    "other": 44
+  },
+  {
+    "month": "2024年09月",
+    "old_applied": 48924,
+    "new_applied": 3204,
+    "completed": 4006,
+    "accepted": 2169,
+    "declined": 1758,
+    "other": 79
+  }
+]

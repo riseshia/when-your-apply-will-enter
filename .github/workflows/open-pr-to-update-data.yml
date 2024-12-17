@@ -1,0 +1,44 @@
+name: Open PR to update data
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+
+jobs:
+  open-pr-to-update-data:
+    name: Open PR to update data
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4.1
+        bundler-cache: true
+
+    - name: Run data update script
+      run: ./update-data.sh
+
+    - name: Create PR
+      run: |
+        target_date=$(date +"%Y-%m-%d")
+        branch_name="update-data-${target_date}"
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        git switch -c "${branch_name}"
+        git add data.json
+        git commit -m "Update data.json on ${target_date}"
+        git push -u origin "${branch_name}"
+
+        gh pr create --title "Update data.json on ${target_date}" --body "This PR updates data.json" --base main --head "${branch_name}" --reviewer "riseshia"
