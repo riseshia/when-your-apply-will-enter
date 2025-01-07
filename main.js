@@ -214,7 +214,24 @@ const renderGraph = (data) => {
   renderAppliedForcastTrend(data);
 }
 
+const guessIfAppliedNow = (data) => {
+  const last3Months = data.slice(-3);
+  const avgCompletedNum = last3Months.reduce((acc, d) => acc + d.completed, 0) / 3;
+  const lastApplied = last3Months[2].new_applied + last3Months[2].old_applied;
+
+  const howManyMonth = Math.ceil(lastApplied / avgCompletedNum);
+
+  const targetDate = new Date();
+  targetDate.setMonth(targetDate.getMonth() + howManyMonth);
+
+  const targetMonth = targetDate.toISOString().split('T')[0].split('-').slice(0, 2).join('年') + '月';
+
+  const ifAppliedNowEl = document.getElementById('if-applied-now');
+  ifAppliedNowEl.textContent = targetMonth;
+}
+
 window.onload = async () => {
   const data = await loadData();
   renderGraph(data);
+  guessIfAppliedNow(data);
 };
