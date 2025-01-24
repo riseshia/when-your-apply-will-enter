@@ -42,7 +42,13 @@ jobs:
 
         git switch -c "${branch_name}"
         git add data.json
-        git commit -m "Update data.json on ${target_date}"
-        git push -u origin "${branch_name}"
+        diff_output=$(git diff --staged)
 
-        gh pr create --title "Update data.json on ${target_date}" --body "This PR updates data.json" --base main --head "${branch_name}" --reviewer "riseshia"
+        if [ -n "$diff_output" ]; then
+          git commit -m "Update data.json on ${target_date}"
+          git push -u origin "${branch_name}"
+
+          gh pr create --title "Update data.json on ${target_date}" --body "This PR updates data.json" --base main --head "${branch_name}" --reviewer "riseshia"
+        else
+          echo "No diff on data. skip to open pr"
+        fi
