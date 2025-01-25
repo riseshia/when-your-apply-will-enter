@@ -430,5 +430,14 @@
     "accepted": 1796,
     "declined": 963,
     "other": 72
+  },
+  {
+    "month": "2024年11月",
+    "old_applied": 48995,
+    "new_applied": 3122,
+    "completed": 2231,
+    "accepted": 1509,
+    "declined": 652,
+    "other": 70
   }
 ]
