@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     csv (3.3.5)
-    json (2.13.2)
+    json (2.14.1)
 
 PLATFORMS
   ruby
