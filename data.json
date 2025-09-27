@@ -502,5 +502,14 @@
     "accepted": 1285,
     "declined": 1816,
     "other": 82
+  },
+  {
+    "month": "2025年07月",
+    "old_applied": 51012,
+    "new_applied": 4467,
+    "completed": 4436,
+    "accepted": 1963,
+    "declined": 2373,
+    "other": 100
   }
 ]
