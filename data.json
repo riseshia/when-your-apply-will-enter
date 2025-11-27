@@ -520,5 +520,14 @@
     "accepted": 1814,
     "declined": 1994,
     "other": 102
+  },
+  {
+    "month": "2025年09月",
+    "old_applied": 50966,
+    "new_applied": 3789,
+    "completed": 4212,
+    "accepted": 2290,
+    "declined": 1823,
+    "other": 99
   }
 ]
