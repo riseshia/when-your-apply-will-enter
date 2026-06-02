@@ -8,7 +8,19 @@
 - `main.js`: ページの JS。生成したデータをベースにグラフを出すロジックが書かれています
 - `data.json`: ページに表示するデータです
 - `convert-to-json.rb`: e-stat からダウンロードした `data.csv` からグラフに必要なデータにしてグラフを作りやすい `data.json` へ変換するスクリプトです
+- `test_convert_to_json.rb`: `convert-to-json.rb` の変換ロジックの minitest テストです
 - `update-data.sh`: e-stat からデータをダウンロードして `data.csv` を更新するスクリプトです。 Actions で定期実行して更新 PR を作るようにしています
+
+## テスト
+
+`convert-to-json.rb` の CSV → JSON 変換ロジックをテストしています。
+
+```sh
+bundle install
+bundle exec ruby test_convert_to_json.rb
+```
+
+PR と `main` への push では `.github/workflows/test.yml` で自動実行されます。
 
 ## 利用データ
 

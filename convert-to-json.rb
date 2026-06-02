@@ -1,53 +1,65 @@
 require 'json'
 require 'csv'
 
-rows = File.read('data.csv').split("\n")
-rows = rows.drop_while { |row| !row.include?('tab_code') }
+module ConvertToJson
+  module_function
 
-Stats = Struct.new(:month, :old_applied, :new_applied, :completed, :accepted, :declined, :other, keyword_init: true) do
-  def to_h
-    {
-      month: month,
-      old_applied: old_applied,
-      new_applied: new_applied,
-      completed: completed,
-      accepted: accepted,
-      declined: declined,
-      other: other,
-    }
+  Stats = Struct.new(:month, :old_applied, :new_applied, :completed, :accepted, :declined, :other, keyword_init: true) do
+    def to_h
+      {
+        month:,
+        old_applied:,
+        new_applied:,
+        completed:,
+        accepted:,
+        declined:,
+        other:,
+      }
+    end
   end
-end
 
-stats_per_month = Hash.new { |h, k| h[k] = Stats.new(month: k) }
+  CATEGORY_TO_FIELD = {
+    '受理_旧受' => :old_applied,
+    '受理_新受' => :new_applied,
+    '既済_総数' => :completed,
+    '既済_許可' => :accepted,
+    '既済_不許可' => :declined,
+    '既済_その他' => :other,
+  }.freeze
 
-rows = CSV.parse(rows.join("\n"), headers: true)
-rows.each do |row|
-  month = row['時間軸（月次）']
-  if month.size == 7 # add leading zero for sort
+  # e-Stat の CSV は先頭にメタデータ行が並ぶので、`tab_code` を含むヘッダ行以降だけを残す
+  def extract_table(raw)
+    raw.split("\n").drop_while { |line| !line.include?('tab_code') }.join("\n")
+  end
+
+  # 一桁の月にゼロ埋めして文字列ソートが暦順になるようにする (例: "2020年1月" -> "2020年01月")
+  def normalize_month(month)
+    return month unless month.size == 7
+
     y, m = month.split("年")
-    month = "#{y}年0#{m}"
+    "#{y}年0#{m}"
   end
 
-  stats = stats_per_month[month]
-  category = row['在留資格審査の受理・処理']
+  def build_stats(csv_text)
+    stats_per_month = Hash.new { |h, k| h[k] = Stats.new(month: k) }
 
-  case category
-  when '受理_旧受' then
-    stats.old_applied = row['value'].to_i
-  when '受理_新受' then
-    stats.new_applied = row['value'].to_i
-  when '既済_総数' then
-    stats.completed = row['value'].to_i
-  when '既済_許可' then
-    stats.accepted = row['value'].to_i
-  when '既済_不許可'
-    stats.declined = row['value'].to_i
-  when '既済_その他'
-    stats.other = row['value'].to_i
+    CSV.parse(csv_text, headers: true).each do |row|
+      month = normalize_month(row['時間軸（月次）'])
+      field = CATEGORY_TO_FIELD[row['在留資格審査の受理・処理']]
+      next unless field
+
+      stats_per_month[month][field] = row['value'].to_i
+    end
+
+    stats_per_month.values.sort_by(&:month)
+  end
+
+  def convert(raw)
+    stats = build_stats(extract_table(raw))
+    JSON.pretty_generate(stats.map(&:to_h))
   end
 end
 
-stats_list = stats_per_month.values.sort_by { |stats| stats.month }
-
-result = JSON.pretty_generate(stats_list.map(&:to_h))
-File.write('data.json', result)
+if __FILE__ == $PROGRAM_NAME
+  File.write('data.json', ConvertToJson.convert(File.read('data.csv')))
+end
