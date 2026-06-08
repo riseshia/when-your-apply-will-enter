@@ -3,7 +3,7 @@ GEM
   specs:
     csv (3.3.5)
     drb (2.2.3)
-    json (2.19.7)
+    json (2.19.8)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
