@@ -1,0 +1,42 @@
+name: Update data
+
+on:
+  schedule:
+    - cron: '0 0 * * SAT'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+
+jobs:
+  update-data:
+    name: Update data
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+    - uses: ruby/setup-ruby@003a5c4d8d6321bd302e38f6f0ec593f77f06600 # v1.319.0
+      with:
+        bundler-cache: true
+
+    - name: Run data update script
+      run: ./update-data.sh
+
+    - name: Run tests
+      run: bundle exec ruby test_convert_to_json.rb
+
+    - name: Commit and push
+      run: |
+        if git diff --quiet -- data.json; then
+          echo "No changes detected"
+          exit 0
+        fi
+
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data.json
+        git commit -m "Update data.json on $(date +"%Y-%m-%d")"
+        git push
