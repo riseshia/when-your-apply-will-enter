@@ -619,5 +619,14 @@
     "accepted": 1489,
     "declined": 2095,
     "other": 129
+  },
+  {
+    "month": "2026年08月",
+    "old_applied": 60603,
+    "new_applied": 7204,
+    "completed": 3054,
+    "accepted": 1226,
+    "declined": 1721,
+    "other": 107
   }
 ]
